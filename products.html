@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Ahmed Trading Spares</title>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            background-color: var(--color-primary);
+            color: var(--color-bg-white);
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--color-accent);
+        }
+
+        .page-title {
+            font-size: 3rem;
+            color: var(--color-bg-white);
+            margin-bottom: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .products-intro {
+            padding: 60px 20px 40px 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .products-intro p {
+            font-size: 1.125rem;
+            color: var(--color-text-muted);
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        /* Products Grid */
+        .products-section {
+            padding: 0 20px 80px 20px;
+            background-color: var(--color-bg-white);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 30px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .category-card {
+            background: var(--color-bg-light);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-med);
+            border: 1px solid #E2E8F0;
+            border-top: 4px solid var(--color-accent);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 240px;
+            object-fit: contain;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .category-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--color-primary);
+        }
+
+        .category-title {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: var(--color-bg-white);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid rgba(253, 184, 19, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .category-desc {
+            color: #CBD5E1;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .product-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            flex-grow: 1;
+        }
+
+        .product-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: var(--color-bg-white);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .product-list li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--color-accent);
+            font-size: 1.2rem;
+            line-height: 1;
+            font-weight: 900;
+        }
+
+        .category-action {
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .btn-category {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--color-accent);
+            border: 1px solid var(--color-accent);
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: all var(--transition-fast);
+            width: 100%;
+        }
+
+        .btn-category:hover {
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="ats-header-wrapper">
+        <div class="ats-header-top">
+            <div class="ats-logo-text">
+                AHMED TRADING AND SERVICE <span class="ats-logo-divider">|</span> <span>HEAVY MACHINERY SPARE
+                    PARTS</span>
+            </div>
+        </div>
+        <nav class="ats-header-nav">
+            <a href="index.html" class="ats-nav-link">HOME</a>
+            <a href="products.html" class="ats-nav-link active">PRODUCTS</a>
+            <a href="contact.html" class="ats-nav-link">CONTACT US</a>
+        </nav>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Our Products</h1>
+            <p style="color: #FDB813; font-size: 1.25rem; font-weight: 600; text-transform: uppercase;">Essential Parts
+                For Peak Machinery Performance</p>
+        </div>
+    </section>
+
+    <!-- Products Intro -->
+    <section class="products-intro">
+        <h2 style="font-size: 2rem; margin-bottom: 20px; text-transform: uppercase;">Comprehensive Heavy Machinery Parts
+        </h2>
+        <p>We supply an extensive range of essential parts required to keep your tracked and wheeled equipment fully
+            operational. From rigorous undercarriage steel to high-efficiency filtration systems, we deliver reliability
+            down to the component level.</p>
+    </section>
+
+    <!-- Main Products Grid -->
+    <section class="products-section">
+        <div class="category-grid">
+
+            <!-- Category 1 -->
+            <div class="category-card">
+                <img src="assets/images/filtration-systems.jpg" alt="Filtration Systems" class="category-image">
+                <div class="category-content">
+                    <h3 class="category-title">Filtration Systems</h3>
+                    <p class="category-desc">Keep your engines running clean and extend machinery lifespan.</p>
+                    <ul class="product-list">
+                        <li>Oil, Fuel & Air Filters</li>
+                        <li>Fuel Water Separators</li>
+                        <li>Hydraulic & Transmission Filters</li>
+                        <li>Dust Filters & Filter Bags</li>
+                        <li>Air Filter Complete Assembly</li>
+                    </ul>
+                    <div class="category-action"><a href="contact.html" class="btn-category">Request Quote</a></div>
+                </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="category-card">
+                <img src="assets/images/ground-engaging-tools-g.e.t..jpg" alt="Ground Engaging Tools"
+                    class="category-image">
+                <div class="category-content">
+                    <h3 class="category-title">Ground Engaging Tools</h3>
+                    <p class="category-desc">Maximize digging efficiency and protect heavy equipment.</p>
+                    <ul class="product-list">
+                        <li>Bucket Teeth & Adapters</li>
+                        <li>Heavy Duty Cutting Edges</li>
+                        <li>Grader Blades</li>
+                        <li>Ripper Shanks and Tips</li>
+                    </ul>
+                    <div class="category-action"><a href="contact.html" class="btn-category">Request Quote</a></div>
+                </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="category-card">
+                <img src="assets/images/maintenance-fluids-and-lubricants.jpg" alt="Maintenance Fluids and Lubricants"
+                    class="category-image">
+                <div class="category-content">
+                    <h3 class="category-title">Fluids & Lubricants</h3>
+                    <p class="category-desc">Industrial-grade lubricants for harsh Oman climates.</p>
+                    <ul class="product-list">
+                        <li>Heavy Duty Engine Oil</li>
+                        <li>Premium Hydraulic Fluid</li>
+                        <li>Gear Oil</li>
+                        <li>High-Pressure Grease</li>
+                        <li>Engine Coolant / Antifreeze</li>
+                    </ul>
+                    <div class="category-action"><a href="contact.html" class="btn-category">Request Quote</a></div>
+                </div>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="category-card">
+                <img src="assets/images/hydraulic-breaker-parts.jpg" alt="Hydraulic Breaker Parts"
+                    class="category-image">
+                <div class="category-content">
+                    <h3 class="category-title">Hydraulic Breaker</h3>
+                    <p class="category-desc">Ensure your rock breakers hit hard and stay operational.</p>
+                    <ul class="product-list">
+                        <li>Chisel, Piston & Bushing</li>
+                        <li>Through Bolt & Charging Kit</li>
+                        <li>Rubber Cushion Absorber</li>
+                        <li>Hammer Wrench Spanner</li>
+                    </ul>
+                    <div class="category-action"><a href="contact.html" class="btn-category">Request Quote</a></div>
+                </div>
+            </div>
+
+            <!-- Category 5 -->
+            <div class="category-card">
+                <img src="assets/images/undercarriage-parts.jpg" alt="Undercarriage Parts" class="category-image">
+                <div class="category-content">
+                    <h3 class="category-title">Undercarriage Parts</h3>
+                    <p class="category-desc">Keep tracked vehicles moving across rugged terrain.</p>
+                    <ul class="product-list">
+                        <li>Heavy Duty Track Chains</li>
+                        <li>Track Shoes (Pads)</li>
+                        <li>Bottom & Carrier Rollers</li>
+                        <li>Drive Sprockets</li>
+                        <li>Front Idlers</li>
+                    </ul>
+                    <div class="category-action"><a href="contact.html" class="btn-category">Request Quote</a></div>
+                </div>
+            </div>
+
+            <!-- Category 6 -->
+            <div class="category-card">
+                <img src="assets/images/hydraulic-hoses-and-fittings.jpg" alt="Hydraulic Hoses and Fittings"
+                    class="category-image">
+                <div class="category-content">
+                    <h3 class="category-title">Hoses & Fittings</h3>
+                    <p class="category-desc">Maintain high hydraulic pressure with reliable hoses.</p>
+                    <ul class="product-list">
+                        <li>High-Pressure Braided Hoses</li>
+                        <li>Hydraulic Adapters</li>
+                        <li>Quick-Disconnect Couplings</li>
+                        <li>O-Ring Face Seal Fittings</li>
+                    </ul>
+                    <div class="category-action"><a href="contact.html" class="btn-category">Request Quote</a></div>
+                </div>
+            </div>
+
+            <!-- Category 7 -->
+            <div class="category-card">
+                <img src="assets/images/pins-and-bushings.jpg" alt="Pins and Bushings" class="category-image">
+                <div class="category-content">
+                    <h3 class="category-title">Pins & Bushings</h3>
+                    <p class="category-desc">Restore tight linkage and prevent excessive joint wear.</p>
+                    <ul class="product-list">
+                        <li>Hardened Main Pivot Pins</li>
+                        <li>Bucket Linkage Bushings</li>
+                        <li>Tolerance Shim Kits</li>
+                        <li>Dust Seals for Joints</li>
+                    </ul>
+                    <div class="category-action"><a href="contact.html" class="btn-category">Request Quote</a></div>
+                </div>
+            </div>
+
+            <!-- Category 8 -->
+            <div class="category-card">
+                <img src="assets/images/hydraulic-cylinder-seal-kits.jpg" alt="Hydraulic Cylinder Seal Kits"
+                    class="category-image">
+                <div class="category-content">
+                    <h3 class="category-title">Cylinder Seal Kits</h3>
+                    <p class="category-desc">Stop hydraulic leaks and restore lifting power.</p>
+                    <ul class="product-list">
+                        <li>Boom Cylinder Kits</li>
+                        <li>Arm/Stick Cylinder Kits</li>
+                        <li>Bucket Cylinder Kits</li>
+                        <li>Steering & Stabilizer Kits</li>
+                    </ul>
+                    <div class="category-action"><a href="contact.html" class="btn-category">Request Quote</a></div>
+                </div>
+            </div>
+
+            <!-- Category 9 -->
+            <div class="category-card">
+                <img src="assets/images/forklift-control-cables.jpg" alt="Forklift Control Cables"
+                    class="category-image">
+                <div class="category-content">
+                    <h3 class="category-title">Forklift Control Cables</h3>
+                    <p class="category-desc">Maintain precise control and operator safety.</p>
+                    <ul class="product-list">
+                        <li>Heavy Duty Throttle Cables</li>
+                        <li>Gear Shift Cables</li>
+                        <li>Clutch Cables</li>
+                        <li>Brake Cables</li>
+                    </ul>
+                    <div class="category-action"><a href="contact.html" class="btn-category">Request Quote</a></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" style="display: flex; flex-direction: column;">
+                    <a href="index.html" class="ats-logo-text" style="text-align: left; margin-bottom: 20px;">
+                        AHMED TRADING<br><span style="font-size: 1rem;">HEAVY MACHINERY SPARE PARTS</span>
+                    </a>
+                    <p>Welcome to Ahmed Trading and Services – your trusted partner for premium heavy equipment spare
+                        parts in Salalah, Oman.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="products.html">PRODUCTS</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Information</h3>
+                    <ul class="footer-links">
+                        <li>📍 Shop No. 10, Building No. 377 Near Al Marai Milk Company, Samaharam St. New Industrial
+                            Area, Salalah, Oman</li>
+                        <li>📞 +968 9696 6464</li>
+                        <li>📧 shahzad@ahmedtrdg.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ahmed Trading and Services. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
