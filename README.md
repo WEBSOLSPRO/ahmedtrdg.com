@@ -1,4 +1,4 @@
-# Ahmed Trading & Services - Website Redesign Project
+# Ahmed Trading & Services - Website Development Project #
 
 📌 Project Overview
 I developed this comprehensive static website for **Ahmed Trading and Services**, a heavy machinery spare parts business based in Salalah, Oman. The project involved transforming a basic one-page WordPress site into a fully responsive, multi-page HTML/CSS/JS architecture tailored to showcase their extensive industrial inventory and improve user navigation.
@@ -22,3 +22,4 @@ I developed this comprehensive static website for **Ahmed Trading and Services**
 
 
 *This repository represents the static hard-coded version of the website created specifically for demonstration, source code review, and version control.*
+
